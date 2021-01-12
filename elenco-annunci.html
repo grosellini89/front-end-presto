@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Presto.it</title>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar"
+        class="shadow d-flex justify-content-between align-items-center bg-grey py-3 px-md-2 px-lg-5 sticky-top">
+        <!-- logo -->
+        <div>
+            <a href="index.html">
+                <img src="./media/logo-main.png" width="80px" alt="">
+            </a>
+        </div>
+        <!-- link -->
+        <div class="w-50 d-flex justify-content-center">
+
+            <a href="profilo-utente.html" class="mx-1 mx-md-3 mx-lg-5">
+                <span class="fa-stack">
+                    <i class="fal fa-rectangle-landscape fa-stack-2x text-main"></i>
+                    <i class="fal fa-users fa-stack-1x text-main"></i>
+                </span>
+            </a>
+
+            <a href="elenco-annunci.html" class="mx-1 mx-md-3 mx-lg-5">
+                <span class="fa-stack">
+                    <i class="fal fa-rectangle-landscape fa-stack-2x text-main"></i>
+                    <i class="fal fa-list  fa-stack-1x text-main"></i>
+                </span>
+            </a>
+ <!-- decidere a cosa collegare questo elemento -->
+            <a href="" class="mx-1 mx-md-3 mx-lg-5">
+                <span class="fa-stack">
+                    <i class="fal fa-rectangle-landscape fa-stack-2x text-main"></i>
+                    <i class="fal fa-exclamation  fa-stack-1x text-main"></i>
+                </span>
+            </a>
+
+        </div>
+        <!-- utilities  -->
+        <div class="d-flex">
+            <div>
+                <span class="fa-stack">
+                    <i class="fal fa-rectangle-landscape fa-stack-2x text-main"></i>
+                    <i class="fal fa-search fa-stack-1x text-main"></i>
+                </span>
+            </div>
+
+
+            <div data-toggle="modal" data-target="#loginModal">
+                <span class="fa-stack">
+                    <i class="fal fa-rectangle-landscape fa-stack-2x text-main"></i>
+                    <i class="fal fa-user fa-stack-1x text-main"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- fine navbar  -->
+
+<header class="half-header">
+    <div class="container h-100">
+        <div class="row h-100 align-item-center">
+            <div class="col-12 pt-5">
+                <h1 class="text-main font-weight-bold txt-shadow border-bottom-main">I nostri annunci</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container my-5 py-5">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <h3 class="ml-2 text-main">Filtra per Categoria</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-tshirt"></i> Abbigliamento</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fal fa-lamp-floor"></i> Arredamento</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="far fa-futbol"></i> Sport</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#" ><i class="far fa-tree"></i> Giardinaggio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="fad fa-car-side"></i> Motori</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-house"></i> Immobili</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-laptop"></i> Elettronica</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#" ><i class="fas fa-music"></i> Musica</a>
+                  </li>
+              </ul>
+              <h3 class="text-main mt-5">Filtra per Prezzo</h3>
+              <input type="range" class="w-100">
+              <p class="small"><span>0€</span><span id="maxPrice" class="float-right">15000</span></p>
+        </div>
+        <div class="col-12 col-md-8 mb-3">
+            <div class="row">
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+            <div class="card-product p-3 position-relative mx-auto mb-3">
+                <p id="name" class="lead product-name mb-0 ">Nome prodotto</p>
+                <p id="category" class="small">Categoria</p>
+                <p id="price" class="h2 text-main mb-0 position-absolute product-price">12€</p>
+                <div class="product-img position-absolute">
+                    <img src="https://picsum.photos/200"  alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container align-items-center">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Link utili:</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-angle-double-right"></i>Regole</a></li>
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-angle-double-right"></i>Sicurezza</a></li>
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-angle-double-right"></i>Condizioni</a></li>
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a>
+                        </li>
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-angle-double-right"></i>Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                   <h5><a href=""><img src="./media/logo-white.png" width="60px" alt=""></a></h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-angle-double-right"></i>Chi siamo</a></li>
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-angle-double-right"></i>Lavora con noi</a></li>
+                        <li><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-angle-double-right"></i>Magazine</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Seguici anche su</h5>
+                    <ul class="list-unstyled quick-links ">
+                        <li class="list-inline-item mx-2"><a href="https://www.fiverr.com/share/qb8D02"><i
+                            class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item mx-2"><a href="https://www.fiverr.com/share/qb8D02"><i
+                            class="fa fa-twitter"></i></a> </li>
+                        <li class="list-inline-item mx-2"><a href="https://www.fiverr.com/share/qb8D02"><i
+                            class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item mx-2"><a href="https://www.fiverr.com/share/qb8D02"><i
+                            class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item mx-2"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i
+                            class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                <p><u><a href="https://www.nationaltransaction.com/">Presto.it</a></u> is a
+                    Registered
+                    MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S.
+                    Bancorp, Minneapolis, MN]</p>
+                <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+            </div>
+            <hr>
+        </div>
+        </div>
+    </section>
+    </footer> <!-- Footer -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="container py-3">
+                    <div class="row">
+                        <div class="col-8">
+                            <h3>Login</h3>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="fas fa-times text-main"></i></span>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <form action="">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="mb-0" for="emailInput">Email
+                                            address</label>
+                                        <input type="email" class="form-control" id="emailInput"
+                                            aria-describedby="emailHelp" placeholder="your@email.com">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label class="mb-0" for="passwordInput">Password</label>
+                                        <input type="password" class="form-control" id="passwordInput"
+                                            placeholder="*******">
+                                    </div>
+                                    <div class="form-group mt-0">
+                                        <a href="" class="small">Password dimenticata?</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-custom float-right">INVIA</button>
+                                </form>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/4bf67599a3.js"></script>
+    <script src="./scripts.js"></script>
+ <!-- <script>
+        fetch('./data.json')
+            .then(response => response.json())
+            .the(data => {
+
+                let productsCategories = Array.from(new Set(data.map(el => el.category))).sort()
+                console.log(productsCategorie);
+            })
+    </script> -->
+</body>
+</html>
